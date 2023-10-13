@@ -20,7 +20,7 @@ function getUsersNamesInAgeRange(users, gender) {
 		for (var i = 0; i < result.length; i++) {
 			sum += result[i];
 		}
-		let avg = (sum / result.length).toFixed();
+		let avg = (sum / result.length);
 		return avg;
 	}
 }
