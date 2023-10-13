@@ -3,5 +3,24 @@ function compareArrays(arr1, arr2) {
 }
 
 function getUsersNamesInAgeRange(users, gender) {
-  
+	if (gender == "мужской") {
+		gender = "мужской";
+	} else {
+		if (gender == "женский") {
+			gender = "женский";
+		} else {
+			return console.log(0);
+		}
+	}
+	if (users.length == 0) {
+		return console.log(0);
+	} else {
+		let result = users.filter((user) => user.gender.match(gender)).map((user) => user.age);
+		let sum = 0;
+		for (var i = 0; i < result.length; i++) {
+			sum += result[i];
+		}
+		let avg = (sum / result.length).toFixed();
+		return console.log(avg);
+	}
 }
