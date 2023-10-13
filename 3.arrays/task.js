@@ -9,11 +9,11 @@ function getUsersNamesInAgeRange(users, gender) {
 		if (gender == "женский") {
 			gender = "женский";
 		} else {
-			return console.log(0);
+			return 0;
 		}
 	}
 	if (users.length == 0) {
-		return console.log(0);
+		return 0;
 	} else {
 		let result = users.filter((user) => user.gender.match(gender)).map((user) => user.age);
 		let sum = 0;
@@ -21,6 +21,6 @@ function getUsersNamesInAgeRange(users, gender) {
 			sum += result[i];
 		}
 		let avg = (sum / result.length).toFixed();
-		return console.log(avg);
+		return avg;
 	}
 }
